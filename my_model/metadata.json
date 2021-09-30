@@ -1,1 +1,1 @@
-{"tfjsVersion":"1.3.1","tmVersion":"2.4.4","packageVersion":"0.8.4-alpha2","packageName":"@teachablemachine/image","timeStamp":"2021-09-27T07:30:54.730Z","userMetadata":{},"modelName":"tm-my-image-model","labels":["face1","face2"],"imageSize":224}
+{"tfjsVersion":"1.3.1","tmVersion":"2.4.4","packageVersion":"0.8.4-alpha2","packageName":"@teachablemachine/image","timeStamp":"2021-09-30T17:38:42.833Z","userMetadata":{},"modelName":"내 image 모델","labels":["기훈","상우","새벽","경찰","할아버지","깡패","미녀","알리","이유미","이병헌","공유","네모","동그라미","세모"],"imageSize":224}
