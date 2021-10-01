@@ -83,7 +83,14 @@
 
                     <div class="file-upload-content">
                         <img class="file-upload-image" id="face-image" src="#" alt="your image" />
-                        <p class="result-message"></p>      <!--get data from  btn-startpredict::predict() -->
+                        <div class="txtbox">
+                            <h1 class="home-title">
+                                <p class="result-message"></p>
+                            </h1>
+                        </div>
+                        
+
+                              <!--get data from  btn-startpredict::predict() -->
                         <div id="label-container"></div>    <!--this will be removed-->
                         <div class="image-title-wrap">
                             <button type="button" onclick="removeUpload()" class="remove-image">Remove <span
@@ -142,49 +149,49 @@
                                 var resultMessage;
                                 switch(prediction[0].className){
                                     case "기훈":
-                                        resultMessage = "나 쌍문동 성기훈이야!! 씨이ㅣㅣ발!!!!!! 슈밤ㅁ슈밤슈슈슈슈슈슉슈밤!!"
+                                        resultMessage = "준형이"
                                         break;
                                     case "상우":
-                                        resultMessage = "알수없음"
+                                        resultMessage = "삼류 허세 찌질남"
                                         break;
                                     case "새벽":
-                                        resultMessage = "알수없음"
+                                        resultMessage = "이정재 애드립에 웃은 사람"
                                         break;
                                     case "경찰":
-                                        resultMessage = "알수없음"
+                                        resultMessage = "멍청이"
                                         break;
                                     case "할아버지":
-                                        resultMessage = "알수없음"
+                                        resultMessage = "조커"
                                         break;
                                     case "깡패":
-                                        resultMessage = "알수없음"
+                                        resultMessage = "돼지육수국밥"
                                         break;
                                     case "미녀":
-                                        resultMessage = "알수없음"
+                                        resultMessage = "앳된 모습의 처녀 빗치"
                                         break;
                                     case "알리":
-                                        resultMessage = "알수없음"
+                                        resultMessage = "듬직한 흑인"
                                         break;
                                     case "이유미":
-                                        resultMessage = "알수없음"
+                                        resultMessage = "고양이"
                                         break;
                                     case "이병헌":
-                                        resultMessage = "알수없음"
+                                        resultMessage = "SNL 세계관 최강자"
                                         break;
                                     case "공유":
-                                        resultMessage = "알수없음"
+                                        resultMessage = "오형서"
                                         break;
                                     case "네모":
-                                        resultMessage = "알수없음"
+                                        resultMessage = "ㅁ"
                                         break;
                                     case "동그라미":
-                                        resultMessage = "알수없음"
+                                        resultMessage = "ㅇ"
                                         break;
                                     case "세모":
-                                        resultMessage = "알수없음"
+                                        resultMessage = "ㅅ"
                                         break;
                                     default:
-                                        resultMessage = "알수없음"
+                                        resultMessage = "당신은 오징어"
                                 }                                               
                                 $('.result-message').html(resultMessage);        //86줄의 ptag class를 query로 받음 + 이 클래스로 css 작업 부탁드림 
                                 for (let i = 0; i < maxPredictions; i++) {       //label-container는 없애는걸로? 일단 수치가 궁금하니 냅두고 나중에 지우기(작업필요x)
@@ -252,4 +259,15 @@
     
     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
 
+
+<!--
+    Copyright (c) 2021 by Andrés Sánchez (https://codepen.io/sedran/pen/GYPevV)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-->
 </html>
