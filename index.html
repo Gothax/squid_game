@@ -86,10 +86,10 @@
                         <div class="txtbox">
                             <h1 class="home-title">
                                 <p class="result-message"></p>
+                                <p class="result-image"><img id="img_id"></p>
                             </h1>
                         </div>
                         
-
                               <!--get data from  btn-startpredict::predict() -->
                         <div id="label-container"></div>    <!--this will be removed-->
                         <div class="image-title-wrap">
@@ -180,6 +180,7 @@
                                         break;
                                     case "공유":
                                         resultMessage = "오형서"
+                                        $("#img_id").attr("src","folder/img/공유_싸대기.jpg");
                                         break;
                                     case "네모":
                                         resultMessage = "ㅁ"
@@ -193,7 +194,7 @@
                                     default:
                                         resultMessage = "당신은 오징어"
                                 }                                               
-                                $('.result-message').html(resultMessage);        //86줄의 ptag class를 query로 받음 + 이 클래스로 css 작업 부탁드림 
+                                $('.result-message').html(resultMessage);       //86줄의 ptag class를 query로 받음 + 이 클래스로 css 작업 부탁드림 
                                 for (let i = 0; i < maxPredictions; i++) {       //label-container는 없애는걸로? 일단 수치가 궁금하니 냅두고 나중에 지우기(작업필요x)
                                     const classPrediction =
                                         prediction[i].className + ": " + prediction[i].probability.toFixed(2);

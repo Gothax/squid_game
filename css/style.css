@@ -79,6 +79,9 @@
   }
 }
 
+img {max-width: 100%; height: auto;}
+span.imageblock {max-width: 100%; height: auto;}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
