@@ -90,6 +90,8 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
 }
 
 hr {
@@ -3035,9 +3037,9 @@ textarea.form-control-lg {
   border-color: #ff0000;
 }
 .btn-primary:hover {
-  color: #000000;
-  background-color: #ff0000;
-  border-color: #ff0000;
+  color: #fff;
+  background-color: #e73d72;
+  border-color: #e73d72;
 }
 
 .btn-check:focus + .btn-primary, .btn-primary:focus {
@@ -11544,8 +11546,8 @@ body {
   width: 100%;
   height: auto;
   min-height: 35rem;
-  padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../folder/img/playground.jpg");
+  padding: 5rem 0;
+  background-color: #000;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11584,21 +11586,21 @@ body {
 }
 
 .about-section {
-  padding-top: 10rem;
+  padding-top: 5rem;
   background: #000000;
 }
 .about-section p {
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 }
 
 .projects-section {
-  padding: 10rem 0;
+  padding: 3rem 0;
   background-color: #070707;
 }
 .projects-section .featured-text {
-  padding: 20rem;
+  padding: 2rem;
   margin-top: -20px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 
@@ -11762,7 +11764,7 @@ h1{
 }
 
 .remove-image:hover {
-  background: #c13b2a;
+  background: #e73d72;
   color: #ffffff;
   transition: all .2s ease;
   cursor: pointer;
@@ -11806,12 +11808,12 @@ h1{
   }
 }
 .projects-section .project-text {
-  padding: 3rem;
+  padding: 1rem;
   font-size: 90%;
 }
 @media (min-width: 992px) {
   .projects-section .project-text {
-    padding: 5rem;
+    padding: 3rem;
   }
   .projects-section .project-text hr {
     border-color: #64a19d;
@@ -11877,5 +11879,5 @@ h1{
 }
 
 .footer {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
