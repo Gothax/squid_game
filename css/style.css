@@ -11615,6 +11615,32 @@ body {
 }
 
 
+.at-share-btn-elements{
+  text-align: center;
+}
+
+
+.sns-go ul {
+  list-style-type: none;
+  margin: 40px 0 0 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.sns-go li {
+  float: left;
+	padding-right: 5px;
+}
+
+.sns-go img {
+    border-radius: 5px;
+    width: 35px;
+}
+
+.single .entry-content {
+	margin-top: 0.6em;
+}
+
 .file-upload {
   background-color: #000;
   width: 600px;
