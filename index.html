@@ -16,6 +16,9 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/style.css" rel="stylesheet" />
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6157feac8d322e9b"></script>
+
 </head>
 
 <body id="page-top">
@@ -43,7 +46,7 @@
                 <div class="text-center">
                     <img class="img-fluid" src="folder/img/squidred.png" alt="..." />
                     <h1 class="text-white mx-auto my-0 text-uppercase">징어 게임</h1>
-                    <h2 class="text-white mx-auto mt-2 mb-4">배우 닮은꼴 찾기</h2>
+                    <!--<h2 class="text-white mx-auto mt-2 mb-4">배우 닮은꼴 찾기</h2> -->
                     <a class="btn btn-primary" href="#about">START</a>
                 </div>
             </div>
@@ -56,7 +59,7 @@
                 <div class="col-lg-8">
                     <h2 class="text-white mb-4">About What</h2>
                     <p class="text-white-50">
-                        OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                        OOOOOOOOOOOOOOOOOOOO
                     </p>
                 </div>
             </div>
@@ -70,10 +73,10 @@
                 <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
                 <!--upload container contains:  image-upload-wrap,    file-upload-content,    btn-startpredict-->
-                <div class="container file-upload">  
+                <div class="container file-upload">
                     <button class="file-upload-btn" type="button"
                         onclick="$('.file-upload-input').trigger( 'click' )">upload</button>
-                   
+
                     <div class="image-upload-wrap">
                         <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
                         <div class="drag-text">
@@ -88,20 +91,24 @@
                                 <p class="result-message"></p>
                             </h1>
                         </div>
-                        
 
-                              <!--get data from  btn-startpredict::predict() -->
-                        <div id="label-container"></div>    <!--this will be removed-->
+
+                        <!--get data from  btn-startpredict::predict() -->
+                        <div id="label-container"></div>
+                        <!--this will be removed-->
                         <div class="image-title-wrap">
                             <button type="button" onclick="removeUpload()" class="remove-image">Remove <span
                                     class="image-title"></span></button>
                         </div>
                     </div>
 
+
+
                     <div class="btn-startpredict">
                         <div id="webcam-container"></div>
                         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-                        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+                        <script
+                            src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
                         <script type="text/javascript">
                             // More API functions here:
                             // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
@@ -147,7 +154,7 @@
                                 const prediction = await model.predict(image, false);
                                 prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
                                 var resultMessage;
-                                switch(prediction[0].className){
+                                switch (prediction[0].className) {
                                     case "기훈":
                                         resultMessage = "준형이"
                                         break;
@@ -192,7 +199,7 @@
                                         break;
                                     default:
                                         resultMessage = "당신은 오징어"
-                                }                                               
+                                }
                                 $('.result-message').html(resultMessage);        //86줄의 ptag class를 query로 받음 + 이 클래스로 css 작업 부탁드림 
                                 for (let i = 0; i < maxPredictions; i++) {       //label-container는 없애는걸로? 일단 수치가 궁금하니 냅두고 나중에 지우기(작업필요x)
                                     const classPrediction =
@@ -202,15 +209,22 @@
                             }
                         </script>
                     </div>
+                    <div class="share-button">
+
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_inline_share_toolbox_dmao"></div>
+
+
+                    </div>
                 </div>
             </div>
 
-                <div class="featured-text text-center text-lg-left">
-                    <h4>Notice</h4>
-                    <p class="text-white-50 mb-0">Teachable이라는 구글에서 제공하는 기능을 사용했습니다.
-                        #SEXY_DUO #AM_I_SEXY
-                    </p>
-                </div>
+            <div class="featured-text text-center text-lg-left">
+                <h4>Notice</h4>
+                <p class="text-white-50 mb-0">Teachable이라는 구글에서 제공하는 기능을 사용했습니다.
+                    #SEXY_DUO #AM_I_SEXY
+                </p>
+            </div>
 
 
 
@@ -270,4 +284,5 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -->
+
 </html>
