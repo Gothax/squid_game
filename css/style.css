@@ -88,6 +88,16 @@ overflow-x:hidden;
 img {max-width: 100%; height: auto;}
 span.imageblock {max-width: 100%; height: auto;}
 
+.result-message{
+  font-family: 'Jua', sans-serif;
+  color: rgb(1, 140, 129);
+}
+
+.text-center h1{
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-family: 'Jua', sans-serif;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -11731,14 +11741,14 @@ h1{
 }
 
 /* title styles */
-.home-title p{
+.txtbox p{
     position: relative;
     overflow: hidden;
     display: block;
     line-height: 1.2;
 }
 
-.home-title p::after{
+.txtbox p::after{
     content: '';
     position: absolute;
     top: 0;
@@ -11750,7 +11760,7 @@ h1{
     transform: translateX(-101%);
 }
 
-.home-title p::before{
+.txtbox p::before{
     content: '';
     position: absolute;
     top: 0;
@@ -11762,8 +11772,8 @@ h1{
     transform: translateX(0);
 }
 
-.home-title p::before,
-.home-title p::after{
+.txtbox p::before,
+.txtbox p::after{
     animation-delay: 1.5s;
 }
 
