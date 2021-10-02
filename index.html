@@ -16,8 +16,6 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/style.css" rel="stylesheet" />
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6157feac8d322e9b"></script>
 
 </head>
 
@@ -59,7 +57,7 @@
                 <div class="col-lg-8">
                     <h2 class="text-white mb-4">About What</h2>
                     <p class="text-white-50">
-                        OOOOOOOOOOOOOOOOOOOO
+                        캐릭터 닮은꼴과 설명을 확인해보세요
                     </p>
                 </div>
             </div>
@@ -80,7 +78,7 @@
                     <div class="image-upload-wrap">
                         <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
                         <div class="drag-text">
-                            <h4 style="color:white">사진을 추가해주세요</h4>
+                            <h4 style="color:white">Add or Drag a Photo</h4>
                         </div>
                     </div>
 
@@ -92,24 +90,14 @@
                                 <p class="result-image"><img id="img_id"></p>
                             </h1>
                         </div>
-<<<<<<< HEAD
-
 
                         <!--get data from  btn-startpredict::predict() -->
                         <div id="label-container"></div>
                         <!--this will be removed-->
-=======
-                        
-                              <!--get data from  btn-startpredict::predict() -->
-                        <div id="label-container"></div>    <!--this will be removed-->
->>>>>>> origin/subdir77
                         <div class="image-title-wrap">
-                            <button type="button" onclick="removeUpload()" class="remove-image">Remove <span
-                                    class="image-title"></span></button>
+                            <button type="button" onclick="removeUpload()" class="remove-image">Remove</button>
                         </div>
                     </div>
-
-
 
                     <div class="btn-startpredict">
                         <div id="webcam-container"></div>
@@ -143,10 +131,14 @@
 
                                 // append elements to the DOM
                                 //document.getElementById("webcam-container").appendChild(webcam.canvas);
+
+                                /*
                                 labelContainer = document.getElementById("label-container");
                                 for (let i = 0; i < maxPredictions; i++) { // and class labels
                                     labelContainer.appendChild(document.createElement("div"));
                                 }
+                                */
+
                             }
                             // async function loop() {
                             //     webcam.update(); // update the webcam frame
@@ -193,8 +185,8 @@
                                         resultMessage = "SNL 세계관 최강자"
                                         break;
                                     case "공유":
-                                        resultMessage = "오형서"
-                                        $("#img_id").attr("src","folder/img/공유_싸대기.jpg");
+                                        resultMessage = "카누카누카누카누카누카누카누카누"
+                                        $("#img_id").attr("src", "folder/img/공유_싸대기.jpg");
                                         break;
                                     case "네모":
                                         resultMessage = "ㅁ"
@@ -207,22 +199,32 @@
                                         break;
                                     default:
                                         resultMessage = "당신은 오징어"
-                                }                                               
+                                }
                                 $('.result-message').html(resultMessage);       //86줄의 ptag class를 query로 받음 + 이 클래스로 css 작업 부탁드림 
+
+                                /*
                                 for (let i = 0; i < maxPredictions; i++) {       //label-container는 없애는걸로? 일단 수치가 궁금하니 냅두고 나중에 지우기(작업필요x)
                                     const classPrediction =
                                         prediction[i].className + ": " + prediction[i].probability.toFixed(2);
                                     labelContainer.childNodes[i].innerHTML = classPrediction;
                                 }
+                                */
                             }
                         </script>
                     </div>
-                    <div class="share-button">
+                    <div class="share-btn">
+                        
+                        <!-- Facebook -->
+                        <a style="color: #3b5998;" href="#!" role="button"><i class="fab fa-facebook-f fa-lg"></i></a>
 
-                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                        <div class="addthis_inline_share_toolbox_dmao"></div>
+                        <!-- Twitter -->
+                        <a style="color: #55acee;" href="#!" role="button"><i class="fab fa-twitter fa-lg"></i></a>
 
+                        <!-- Google -->
+                        <a style="color: #dd4b39;" href="#!" role="button"><i class="fab fa-google fa-lg"></i></a>
 
+                        <!-- Instagram -->
+                        <a style="color: #ac2bac;" href="#!" role="button"><i class="fab fa-instagram fa-lg"></i></a>
                     </div>
                 </div>
             </div>
