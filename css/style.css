@@ -88,6 +88,12 @@ overflow-x:hidden;
 img {max-width: 100%; height: auto;}
 span.imageblock {max-width: 100%; height: auto;}
 
+.characterName{
+  font-family: 'Jua', sans-serif;
+  font-family: 'Sunflower', sans-serif;
+  color: #e73d72;
+}
+
 .result-message{
   font-family: 'Jua', sans-serif;
   color: rgb(1, 140, 129);

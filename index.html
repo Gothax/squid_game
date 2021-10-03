@@ -32,6 +32,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&family=Jua&display=swap');
     </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&family=Sunflower:wght@700&display=swap');
+    </style>
 </head>
 
 <body id="page-top">
@@ -100,6 +103,7 @@
                     <div class="file-upload-content">
                         <img class="file-upload-image" id="face-image" src="#" alt="your image" />
                         <div class="txtbox">
+                                <p class="characterName"></p>
                                 <p class="result-message"></p>
                                 <p class="result-image"><img id="img_id"></p>
                         </div>
@@ -165,60 +169,75 @@
                                 const prediction = await model.predict(image, false);
                                 prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
                                 var resultMessage;
+                                var charName;
                                 switch (prediction[0].className) {
                                     case "기훈":
-                                        resultMessage = "극한의 상황에서도 남을 챙길 줄 아는 따뜻한 마음의 소유자 입니다.\n어쩌면 당신이 456억의 주인공?\n빨대는 떨어진거 쓰는거 아닙니다."
+                                        charName = "성기훈";
+                                        resultMessage = "극한의 상황에서도 남을 챙길 줄 아는 따뜻한 마음의 소유자 입니다. 어쩌면 당신이 456억의 주인공?\n빨대는 떨어진거 쓰는거 아닙니다."
                                         $("#img_id").attr("src","folder/img/이정재_활짝2.jpg");
                                         break;
                                     case "상우":
+                                        charName = "조상우";
                                         resultMessage = "냉철한 판단을 잘 하는군요.\n똑똑한 머리를 가지고 있어 전략적이며, 어떤 위기라도 헤쳐 나갈 수 있을 것입니다.\n하지만 남을 제물로 삼는 것에 망설임이 없고 차갑다는 말을 들을 수 있습니다.\n탈락 위기에도 끝까지 정신 차리고 뒤통수 후리기!"
                                         $("#img_id").attr("src","folder/img/매정한_상우.jpg");
                                         break;
                                     case "새벽":
+                                        charName = "강새벽";
                                         resultMessage = "마음을 잘 안주는 고양이 같은 당신.\n살아남기 위해 남을 믿지 않고 차가운 모습을 보여주지만 한번 마음을 열면 매력에 빠질수 밖에 없는 매력의 소유자입니다.\n남을 못 믿을지라도 기댈곳은 필요합니다.\n유미같이 좋은 사람 꼭 만나세요!"
                                         $("#img_id").attr("src","folder/img/새벽.jpg");
                                         break;
                                     case "경찰":
+                                        charName = "황준호";
                                         resultMessage = "책임감이 강하고 목표를 위해 멈추지 않는군요.\n형을 보고 놀라지 마세요.\n결국 못 빠져나갔지만 진실은 언젠가 세상에 밝혀질겁니다."
                                         $("#img_id").attr("src","folder/img/하준(경찰).jpg");
                                         break;
                                     case "할아버지":
-                                        resultMessage = "그만해~~ 나 무서워~~ 이러다 우리 다 쥬겅~~\n엄청난 비밀을 감추고 있는 당신은 나의 깐부.(치킨 먹고싶다)\n기훈이가 눈치가 없구만,,,\n죽일까?^_^"
+                                        charName = "오일남";
+                                        resultMessage = "그만해~~ 나 무서워~~ 이러다 우리 다 주겅~~\n엄청난 비밀을 감추고 있는 당신은 나의 깐부.(치킨 먹고싶다)\n기훈이가 눈치가 없구만,,,^_^"
                                         $("#img_id").attr("src","folder/img/할아버지2.jpg");
                                         break;
                                     case "깡패":
+                                        charName = "장덕수";
                                         resultMessage = "피도 눈물도 없는 무시무시한 당신, 이기기 위해 수단과 방법을 가리지 않는군요.\n힘과 덩치만 믿고 살아가기엔 세상은 무자비합니다!\n밤이 되었습니다.\n마피아는 죽일 사람을 지목하세요.\n야 쟤 죽여."
                                         $("#img_id").attr("src","folder/img/덕수2.jpg");
                                         break;
                                     case "미녀":
+                                        charName = "한미녀";
                                         resultMessage = "원한을 품으면 절대 잊지 않는군요.\n인과응보가 확실한 당신!\n당하고만 살면 한미녀가 아니지!\n나 한미녀야~~!!!"
                                         $("#img_id").attr("src","folder/img/미녀.jpg");
                                         break;
                                     case "알리":
+                                        charName = "알리 압둘";
                                         resultMessage = "착한 심성을 가졌군요. 그 착한 심성 때문에 탈락하지 않게 조심!\n사장님 공장이 그립읍니다...여긴 피도 눈물도 없어요ㅠㅠ"
                                         $("#img_id").attr("src","folder/img/알리2.jpg");
                                         break;
                                     case "이유미":
+                                        charName = "지영";
                                         resultMessage = "슬픈 과거가 있지만 통통 튀는 매력을 가졌군요.\n삶은 원래 뜻대로 안되지만 생명은 소중합니다.\n포기하지말고 될때까지 해보세요!\n좋은 인연과 기회가 닿길 바래요!\n우리 같이 제주도나 갈까..?ㅎㅎ"
                                         $("#img_id").attr("src","folder/img/이유미.jpg");
                                         break;
                                     case "이병헌":
+                                        charName = "프론트맨";
                                         resultMessage = "엄청난 카리스마가 있는 당신. 그리고 상상도 못한 정체.. 형이 거기서 왜 나와?ㄴㅇㄱ\n아니 목소리까지 멋있으면 어떡해?"
                                         $("#img_id").attr("src","folder/img/이병헌.jpg");
                                         break;
                                     case "공유":
+                                        charName = "딱지왕";
                                         resultMessage = "남을 잘 유혹하는 성격이신가요?\n아마 그 얼굴이면 다 될겁니다.\n딱지나 한 판 치시죠ㅎㅎ"
                                         $("#img_id").attr("src","folder/img/공유_싸대기.jpg");
                                         break;
                                     case "네모":
+                                        charName = "네모";
                                         resultMessage = "얼굴이 까맣고 네모낳군요!\n부러워요!!"
                                         $("#img_id").attr("src","folder/img/공유_싸대기.jpg");
                                         break;
                                     case "동그라미":
+                                        charName = "동그라미";
                                         resultMessage = "얼굴이 까맣고 동그랗군요!!?!^^"
                                         $("#img_id").attr("src","folder/img/공유_싸대기.jpg");
                                         break;
                                     case "세모":
+                                        charName = "세모";
                                         resultMessage = "왜 얼굴까면 다 잘생겼어?\n짜증나"
                                         $("#img_id").attr("src","folder/img/공유_싸대기.jpg");
                                         break;
@@ -226,6 +245,7 @@
                                         resultMessage = "당신은 오징어 ㅎ ㅎ"
                                 }
                                 $('.result-message').html(resultMessage);       //86줄의 ptag class를 query로 받음 + 이 클래스로 css 작업 부탁드림 
+                                $('.characterName').html(charName);
 
                                 /*
                                 //label-container는 없애는걸로? 일단 수치가 궁금하니 냅두고 나중에 지우기(작업필요x)                                       
