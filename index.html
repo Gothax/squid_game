@@ -57,13 +57,12 @@
     </nav>
     <!-- Title-->
     <header class="topTitle">
-        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="container px-4 px-lg-5 d-flex h-80 align-items-center justify-content-center">
             <div class="d-flex justify-content-center">
                 <div class="text-center">
-                    <img class="img-fluid" src="folder/img/squidred.png" alt="..." />
-                    <h1 class="text-white mx-auto my-0 text-uppercase">징어 게임</h1>
+                    <img class="img-fluid" src="folder/img/temp.png" alt="..." />
+                    <h1 class="text-white mx-auto my-0 text-uppercase">징 어 게 임</h1>
                     <!--<h2 class="text-white mx-auto mt-2 mb-4">배우 닮은꼴 찾기</h2> -->
-                    <a class="btn btn-primary" href="#about">START</a>
                 </div>
             </div>
         </div>
@@ -73,10 +72,7 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8">
-                    <h2 class="text-white mb-4">About What</h2>
-                    <p class="text-white-50">
-                        캐릭터 닮은꼴과 설명을 확인해보세요!
-                    </p>
+                    <h2 class="text-white mb-4">캐릭터 닮은꼴과 설명을 확인해보세요!</h2>
                 </div>
             </div>
         </div>
@@ -96,7 +92,7 @@
                     <div class="image-upload-wrap">
                         <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
                         <div class="drag-text">
-                            <h4 style="color:white">Photo</h4>
+                            <h4 style="color:white">정면 사진을 업로드 해주세요</h4>
                         </div>
                     </div>
 
@@ -193,7 +189,7 @@
                                         break;
                                     case "할아버지":
                                         charName = "오일남";
-                                        resultMessage = "그만해~~ 나 무서워~~ 이러다 우리 다 주겅~~\n엄청난 비밀을 감추고 있는 당신은 나의 깐부.(치킨 먹고싶다)\n기훈이가 눈치가 없구만,,,^_^"
+                                        resultMessage = "그만해~~ 나 무서워~~ 이러다 우리 다 주겅~~\n엄청난 비밀을 감추고 있는 당신은 나의 깐부.(치킨 먹고싶다)\n기훈이가 눈치가 없구만,,,"
                                         $("#img_id").attr("src","folder/img/할아버지2.jpg");
                                         break;
                                     case "깡패":
@@ -209,7 +205,7 @@
                                     case "알리":
                                         charName = "알리 압둘";
                                         resultMessage = "착한 심성을 가졌군요. 그 착한 심성 때문에 탈락하지 않게 조심!\n사장님 공장이 그립읍니다...여긴 피도 눈물도 없어요ㅠㅠ"
-                                        $("#img_id").attr("src","folder/img/알리2.jpg");
+                                        $("#img_id").attr("src","folder/img/알리.jpg");
                                         break;
                                     case "이유미":
                                         charName = "지영";
@@ -238,7 +234,7 @@
                                         break;
                                     case "세모":
                                         charName = "세모";
-                                        resultMessage = "왜 얼굴까면 다 잘생겼어?\n짜증나"
+                                        resultMessage = "왜 얼굴까면 다 잘생겼어?"
                                         $("#img_id").attr("src","folder/img/공유_싸대기.jpg");
                                         break;
                                     default:
@@ -294,10 +290,10 @@
             </div>
 
             <div class="featured-text text-center text-lg-left">
-                <h4>Notice</h4>
-                <p class="text-white-50 mb-0">Teachable이라는 구글에서 제공하는 기능을 사용했습니다.
-                    #SEXY_DUO #AM_I_SEXY
-                </p>
+                <!-- <h4 style="text-align: center;">Notice</h4> -->
+                <h5 class="text-white text-center mb-0">
+                    AI모델을 활용하므로 사진은 저장되지 않습니다.
+                </h5>
             </div>
 
 
@@ -308,12 +304,13 @@
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
                                 <h4 class="text-white">Development References</h4>
-                                <p class="mb-0 text-white-50">JoCoding
+                                <p class="reference">
                                     Teachable
                                     Bootstrap
                                     Codepen
+                                    JoCoding
+                                    Addthis
                                 </p>
-                                <hr class="d-none d-lg-block mb-0 ms-0" />
                             </div>
                         </div>
                     </div>
@@ -326,8 +323,8 @@
 
 
     <!-- Footer-->
-    <footer class="footer bg-black small text-center text-white-50">
-        <div class="container px-4 px-lg-5">Copyright &copy; 2021-09-29-0127</div>
+    <footer class="footer bg-light small text-center text-white-50">
+        <div class="container px-4 px-lg-5">Copyright &copy; github@gothax </div>
     </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>

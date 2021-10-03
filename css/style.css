@@ -4085,7 +4085,7 @@ textarea.form-control-lg {
   color: #50817e;
 }
 .nav-link.disabled {
-  color: #6c757d;
+  color: #ff0000;
   pointer-events: none;
   cursor: default;
 }
@@ -11569,8 +11569,8 @@ body {
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 35rem;
-  padding: 3rem 0;
+  min-height: 25rem;
+  padding: 1rem 0;
   background-color: #000;
   background-position: center;
   background-repeat: no-repeat;
@@ -11579,14 +11579,11 @@ body {
 }
 .topTitle h1, .topTitle .h1 {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 2.2rem;
+  font-size: 2.0rem;
   line-height: 2.5rem;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.5rem;
 }
-.topTitle h2, .topTitle .h2 {
-  max-width: 25rem;
-  font-size: 1.3rem;
-}
+
 @media (min-width: 768px) {
   .topTitle h1, .topTitle .h1 {
     font-size: 3.5rem;
@@ -11595,7 +11592,7 @@ body {
 }
 @media (min-width: 992px) {
   .topTitle {
-    height: 100vh;
+    height: 70vh;
     padding: 0;
   }
   .topTitle h1, .topTitle .h1 {
@@ -11609,11 +11606,11 @@ body {
   }
 }
 .text-white{
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .about-section {
-  padding-top: 4rem;
+  padding-top: 1rem;
   background: #000000;
 }
 .about-section p {
@@ -11622,11 +11619,11 @@ body {
 
 .projects-section {
   padding: 3rem 0;
-  background-color: #070707;
+  background-color: rgb(0, 0, 0);
 }
 .projects-section .featured-text {
-  padding: 2rem;
-  margin-top: -20px;
+  padding: 1rem;
+  margin-top: -10px;
   margin-bottom: 20px;
 }
 
@@ -11832,19 +11829,23 @@ h1{
     margin: 0;
     color: #fff;
     border: none;
-    padding: 20px;
+    padding: 10px;
     transition: all .2s ease;
     outline: none;
     text-transform: uppercase;
     font-weight: 100;
 }
 
-.btn-startpredict .btn-outline-primary{
+.project-text .reference{
+  color: #e73d72;
+}
+
+/* .btn-startpredict .btn-outline-primary{
     color: #fff;
     background-color: #ff0000;
     padding: 13px 20px;
     margin: 7px;
-}
+} */
 
 .btn-outline-primary:hover {
   color: #fff;
@@ -11859,21 +11860,16 @@ h1{
   }
 }
 .projects-section .project-text {
-  padding: 1rem;
+  padding: 0.5rem; 
   font-size: 90%;
 }
 @media (min-width: 992px) {
   .projects-section .project-text {
     padding: 3rem;
   }
-  .projects-section .project-text hr {
-    border-color: #64a19d;
-    border-width: 0.25rem;
-    width: 30%;
-  }
 }
 
-.signup-section {
+/* .signup-section {
   padding: 10rem 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../folder/img/bg-signup.jpg");
   background-position: center;
@@ -11890,7 +11886,7 @@ h1{
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   border: 0;
-}
+} */
 
 .contact-section {
   padding-top: 5rem;
@@ -11929,6 +11925,7 @@ h1{
   color: #fff;
 }
 
-.footer {
-  padding: 2rem 0;
+.footer .container{
+  padding: 1rem 0;
+  color: black;
 }
