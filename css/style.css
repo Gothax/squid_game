@@ -79,18 +79,13 @@
   }
 }
 
-
-
 html,
 body{
-  height: 100%;
 width:100%;
 overflow-x:hidden;
 margin: 0;
 padding: 0;
 }
-
-
 
 img {max-width: 100%; height: auto;}
 span.imageblock {max-width: 100%; height: auto;}
@@ -688,7 +683,6 @@ progress {
     max-width: 720px;
   }
 }
-
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
@@ -4093,7 +4087,7 @@ textarea.form-control-lg {
   color: #50817e;
 }
 .nav-link.disabled {
-  color: #6c757d;
+  color: #ff0000;
   pointer-events: none;
   cursor: default;
 }
@@ -11490,12 +11484,12 @@ body {
 }
 
 #mainNav {
-  min-height: 3.5rem;
+  min-height: 2.7rem;
   background-color: #fff;
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
-  padding: 0.4rem;
+  padding: 0.75rem;
   color: #64a19d;
   border: 1px solid #64a19d;
 }
@@ -11595,7 +11589,7 @@ body {
 @media (min-width: 768px) {
   .topTitle h1, .topTitle .h1 {
     font-size: 3.5rem;
-    line-height: 4rem; 
+    line-height: 4rem;
   }
 }
 @media (min-width: 992px) {
@@ -11933,11 +11927,7 @@ h1{
   color: #fff;
 }
 
-
-.footer {
-  padding: 2rem 0;
-}
-
-.footer h6{
-  color: white;
+.footer .container{
+  padding: 1rem 0;
+  color: black;
 }
