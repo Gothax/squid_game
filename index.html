@@ -17,7 +17,12 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/style.css" rel="stylesheet" />
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6157feac8d322e9b"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+        // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+        Kakao.init('8572b1ac8e404935a2162a9138f81b5c');
+        Kakao.isInitialized();
+    </script>
     <!--
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     
@@ -38,7 +43,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 </head>
 
-<body>
+<body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
@@ -255,9 +260,132 @@
                                     }
                                     */
                                 }
-                            </script>
-                        </div>
-                        <div class="share-btn">
+                        </script>
+                    </div>
+
+                    <!-- <input type="button" onclick="sendLinkCustom()" value="Custom"/>
+                    <script>
+                        function sendLinkCustom() {
+                          Kakao.init('8572b1ac8e404935a2162a9138f81b5c');
+                          Kakao.Link.sendCustom({
+                            templateId: "62875"
+                          });
+                        }
+                    </script> -->
+
+                    <!-- <a id="create-kakao-link-btn" href="javascript:;">
+                        <img
+                          src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+                        />
+                      </a>
+                    <script type="text/javascript">
+                        Kakao.Link.createScrapButton({
+                          container: '#create-kakao-link-btn',
+                          requestUrl: 'https://squid-test.netlify.app',
+                        })
+                    </script> -->
+
+                    <a id="create-kakao-link-btn" href="javascript:;">
+                        <img
+                        src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+                        />
+                    </a>
+                    <script type="text/javascript">
+                        Kakao.Link.createCustomButton({
+                        container: '#create-kakao-link-btn',
+                        templateId: 62875,
+                        templateArgs: {
+                            title:
+                            '오징어 게임에 초대합니다.',
+                            description:
+                            '내가 게임에 참가한다면?',
+                        },
+                        })
+                    </script>
+  
+                      
+
+                    
+                    <!-- <div class="share-btn">
+                        <a id="kakao-link-btn" href="javascript:;">
+                            <img
+                              src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+                            />
+                        </a>
+                        <script type="text/javascript">
+                            Kakao.init('8572b1ac8e404935a2162a9138f81b5c');
+                            Kakao.Link.createCustomButton({
+                            container: '#kakao-link-btn',
+                            templateId: {YOUR_TEMPLATE_ID : "62875"},
+                            templateArgs: {
+                                'title': '오징어 게임에 초대합니다.',
+                                'description': '설명 영역입니다.'
+                            }
+                            });
+                        </script> -->
+
+                        <!--
+                        <script type="text/javascript">
+                            Kakao.Link.createDefaultButton({
+                                container: '#create-kakao-link-btn',
+                                objectType: 'feed',
+                                content: {
+                                    title: '오늘의 디저트',
+                                    description: '아메리카노, 빵, 케익',
+                                    imageUrl:
+                                    'http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+                                    link: {
+                                    mobileWebUrl: 'https://developers.kakao.com',
+                                    androidExecutionParams: 'test',
+                                    },
+                                },
+                                itemContent: {
+                                    profileText: 'Kakao',
+                                    profileImageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+                                    titleImageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+                                    titleImageText: 'Cheese cake',
+                                    titleImageCategory: 'Cake',
+                                    items: [
+                                    {
+                                        item: 'Cake1',
+                                        itemOp: '1000원',
+                                    },
+                                    {
+                                        item: 'Cake2',
+                                        itemOp: '2000원',
+                                    },
+                                    {
+                                        item: 'Cake3',
+                                        itemOp: '3000원',
+                                    },
+                                    {
+                                        item: 'Cake4',
+                                        itemOp: '4000원',
+                                    },
+                                    {
+                                        item: 'Cake5',
+                                        itemOp: '5000원',
+                                    },
+                                    ],
+                                    sum: 'Total',
+                                    sumOp: '15000원',
+                                },
+                                social: {
+                                    likeCount: 10,
+                                    commentCount: 20,
+                                    sharedCount: 30,
+                                },
+                                buttons: [
+                                    {
+                                    title: '웹으로 이동',
+                                    link: {
+                                        mobileWebUrl: 'https://developers.kakao.com',
+                                    },
+                                    },
+
+                                ]
+                                });
+                        </script> -->
 
                             <!-- <div class="row text-center">
                             <div class="col-12">
@@ -285,9 +413,10 @@
                                 </span>
                             </div>
                         </div> -->
-                            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        
                             <div class="addthis_inline_share_toolbox_lal9"></div>
                         </div>
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
                     </div>
                 </div>
 
@@ -329,14 +458,16 @@
             </div>
         </footer>
 
+    <!-- Footer-->
+    <!-- <footer class="footer bg-light small text-center text-white-50">
+        <div class="container px-4 px-lg-5">Copyright &copy; github@gothax </div>
+    </footer> -->
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/face.js"></script>
-
-
-        <!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>  ?????????????????????????? -->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/face.js"></script>
+    <script src="js/share.js" charset="utf-8"></script>
 
 </body>
 <!-- Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)

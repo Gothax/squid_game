@@ -4093,7 +4093,7 @@ textarea.form-control-lg {
   color: #50817e;
 }
 .nav-link.disabled {
-  color: #ff0000;
+  color: #6c757d;
   pointer-events: none;
   cursor: default;
 }
@@ -11495,7 +11495,7 @@ body {
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
-  padding: 0.75rem;
+  padding: 0.4rem;
   color: #64a19d;
   border: 1px solid #64a19d;
 }
